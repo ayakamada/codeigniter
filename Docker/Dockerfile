@@ -31,6 +31,7 @@ RUN usermod -G wheel web-user
 
 # アプリケーション関連ディレクトリ作成
 RUN mkdir -p /home/source/sites
+RUN mkdir -p /home/source/sites/my-site.com/logs
 RUN mkdir -p /usr/local/bin
 
 # ディレクトリのオーナー変更
@@ -42,16 +43,17 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 ## codeigniter install
-RUN composer create-project kenjis/codeigniter-composer-installer codeigniter
+#RUN composer create-project kenjis/codeigniter-composer-installer codeigniter
 
 
 ### Linux設定 ###
 
 
 # シンボリックリンク作成
-
-
-
+RUN ln -s /home/source/sites/my-site/public /home/source/sites/my-site.com/public
+RUN ln -s /home/source/sites/my-site/vender /home/source/sites/my-site.com/vender
+RUN ln -s /home/source/sites/my-site/application /home/source/sites/my-site.com/application
+RUN ln -s /home/source/sites/my-site/bin /home/source/sites/my-site.com/bin
 
 ### Apache設定 ###
 
@@ -59,8 +61,7 @@ RUN composer create-project kenjis/codeigniter-composer-installer codeigniter
 RUN mkdir -p /etc/httpd/conf.d/vhosts
 
 # バーチャルホスト作成
-#ADD vhosts/gp32x.com.conf /etc/httpd/conf.d/vhosts/gp32x.com.conf
-
+ADD vhosts/my-site.com.conf /etc/httpd/conf.d/vhosts/my-site.com.conf
 
 # apacheコンフィグ設定
 RUN cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.org
