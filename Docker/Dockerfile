@@ -4,9 +4,6 @@ FROM centos:centos7
 RUN yum check
 # RUN yum update -y
 
-RUN yum -y install yum-utils
-RUN yum -y install less
-
 ### httpdインストール
 RUN yum -y install httpd
 
@@ -31,7 +28,7 @@ RUN usermod -G wheel web-user
 
 # アプリケーション関連ディレクトリ作成
 RUN mkdir -p /home/source/sites
-RUN mkdir -p /home/source/sites/my-site.com/logs
+RUN mkdir -p /home/web/my-site.com/logs
 RUN mkdir -p /usr/local/bin
 
 # ディレクトリのオーナー変更
@@ -50,10 +47,10 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 
 # シンボリックリンク作成
-RUN ln -s /home/source/sites/my-site/public /home/source/sites/my-site.com/public
-RUN ln -s /home/source/sites/my-site/vender /home/source/sites/my-site.com/vender
-RUN ln -s /home/source/sites/my-site/application /home/source/sites/my-site.com/application
-RUN ln -s /home/source/sites/my-site/bin /home/source/sites/my-site.com/bin
+RUN ln -s /home/source/sites/my-site/public /home/web/my-site.com/public
+RUN ln -s /home/source/sites/my-site/vender /home/web/my-site.com/vender
+RUN ln -s /home/source/sites/my-site/application /home/web/my-site.com/application
+RUN ln -s /home/source/sites/my-site/bin /home/web/my-site.com/bin
 
 ### Apache設定 ###
 
@@ -68,7 +65,7 @@ RUN cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.org
 RUN echo "" >> /etc/httpd/conf/httpd.conf
 RUN echo "User web-user" >> /etc/httpd/conf/httpd.conf
 RUN echo "Group web-user" >> /etc/httpd/conf/httpd.conf
-#RUN echo "Include conf.d/vhosts/*.conf" >> /etc/httpd/conf/httpd.conf
+RUN echo "Include conf.d/vhosts/*.conf" >> /etc/httpd/conf/httpd.conf
 
 
 ### PHP設定 ###
