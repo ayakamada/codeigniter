@@ -134,4 +134,4 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array();
 
-$autoload['libraries'] = array('smarty');
+$autoload['libraries'] = array('MY_Smarty');

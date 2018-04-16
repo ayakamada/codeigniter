@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class CI_Smarty extends Smarty {
+class MY_Smarty extends Smarty {
 
     public function __construct()
     {
