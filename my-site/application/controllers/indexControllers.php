@@ -10,4 +10,29 @@ class IndexControllers extends CI_Controller {
     //  echo '</pre>';
     $this->my_smarty->view('index/index.tpl');
   }
+
+  public function article()
+  {
+    $this->my_smarty->view('howto/howto.tpl');
+
+    // $params = $this->_getAllParams();
+
+    $article_list = $this->_getConfig()->get('/pages/pages.yml', array());
+    $article = array();
+
+    echo '<pre>';
+    var_dump($article);
+    echo '</pre>';
+    // foreach ($article_list as $item)
+    // {
+    //   if ($item['key'] == $params['key'])
+    //   {
+    //     $article = $item;
+    //     break;
+    //   }
+    // }
+    // $this->my_smarty->assign('params', $params);
+    // $this->my_smarty->assign('article', $article);
+  }
+
 }

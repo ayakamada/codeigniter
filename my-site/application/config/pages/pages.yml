@@ -1,0 +1,23 @@
+- key: home
+  title: トップページ
+  image_url: /img/top.jpg
+
+- key: howto
+  title: 効果のページ
+  image_url: /img/effect.jpg
+
+- key: face
+  title: 効果ー顔ページ
+  image_url: /img/effect.jpg
+
+- key: product
+  title: 商品ページ
+  image_url: /img/product/product.jpg
+
+- key: product_no1
+  title: 商品１
+  image_url: /img/product/product01.jpg
+
+- key: product_no1_effect
+  title: 商品１の効果
+  image_url: /img/product/product01_effect.jpg
