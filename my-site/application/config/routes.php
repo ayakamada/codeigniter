@@ -6,6 +6,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $route['translate_uri_dashes'] = FALSE;
 
 $route['default_controller'] = 'IndexControllers';
-$route['howto'] = 'IndexControllers/article';
-$route['howto/face'] = 'IndexControllers/article';
+$route['howto'] = 'IndexControllers/howto';
+$route['howto/face'] = 'IndexControllers/face';
 

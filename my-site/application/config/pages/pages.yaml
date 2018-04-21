@@ -1,23 +1,41 @@
-- key: home
+home:
+  key: home
   title: トップページ
   image_url: /img/top.jpg
+  description: page description
+  keyword: keyword, keyword2
 
-- key: howto
+howto:
+  key: howto
   title: 効果のページ
   image_url: /img/effect.jpg
+  description: page description
+  keyword: keyword, keyword2
 
-- key: face
+face:
+  key: face
   title: 効果ー顔ページ
   image_url: /img/effect.jpg
+  description: page description
+  keyword: keyword, keyword2
 
-- key: product
+product:
+  key: product
   title: 商品ページ
   image_url: /img/product/product.jpg
+  description: page description
+  keyword: keyword, keyword2
 
-- key: product_no1
+product_no1:
+  key: product_no1
   title: 商品１
   image_url: /img/product/product01.jpg
+  description: page description
+  keyword: keyword, keyword2
 
-- key: product_no1_effect
+product_no1_effect:
+  key: product_no1_effect
   title: 商品１の効果
   image_url: /img/product/product01_effect.jpg
+  description: page description
+  keyword: keyword, keyword2
