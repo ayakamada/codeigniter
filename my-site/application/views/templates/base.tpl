@@ -16,7 +16,9 @@
     {block name='canonical'}{/block}
     {block name='jquery'}{/block}
     {block name='js'}{/block}
-    {block name='css'}{/block}
+    {block name='css'}
+      <link rel="stylesheet" href="../../../assets/css/main.css">
+    {/block}
     {block name='analytics'}{/block}
   </head>
 {/block}
@@ -25,11 +27,20 @@
   {block name='inner-analytics'}{/block}
   {block name='header'}
   <header>
-   <img src="" alt="logo">
+   <img src="/assets/img/no_img.jpg" alt="logo">
   </header>
   {/block}
+  {block name="side"}
+  <nav>
+    <ul>
+    {foreach $pagelist as $pages}
+      <li><a href="">{$pages.title}</a></li>
+    {/foreach}
+    </ul>
+  </nav>
+  {/block}
   {block name="main"}
-  <p></p>{/block}
+  {/block}
   {block name='footer'}
     <footer>
     {block name='footer_inner'}

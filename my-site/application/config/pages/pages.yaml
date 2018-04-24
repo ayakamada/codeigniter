@@ -1,27 +1,31 @@
 home:
   key: home
   title: トップページ
+  menu_name: トップページ
   image_url: /img/top.jpg
   description: page description
   keyword: keyword, keyword2
 
 howto:
   key: howto
-  title: 効果のページ
-  image_url: /img/effect.jpg
+  title: 使い方のページ
+  menu_name: 使い方のページ
+  image_url: img/howto.jpg
   description: page description
   keyword: keyword, keyword2
 
 face:
   key: face
   title: 効果ー顔ページ
-  image_url: /img/effect.jpg
+  menu_name: 効果ー顔ページ
+  image_url: img/face.jpg
   description: page description
   keyword: keyword, keyword2
 
 product:
   key: product
   title: 商品ページ
+  menu_name: 商品ページ
   image_url: /img/product/product.jpg
   description: page description
   keyword: keyword, keyword2
@@ -29,6 +33,7 @@ product:
 product_no1:
   key: product_no1
   title: 商品１
+  menu_name: 商品１
   image_url: /img/product/product01.jpg
   description: page description
   keyword: keyword, keyword2
@@ -36,6 +41,7 @@ product_no1:
 product_no1_effect:
   key: product_no1_effect
   title: 商品１の効果
+  menu_name: 商品１の効果
   image_url: /img/product/product01_effect.jpg
   description: page description
   keyword: keyword, keyword2

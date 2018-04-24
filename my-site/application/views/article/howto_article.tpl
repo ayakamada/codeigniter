@@ -1,6 +1,9 @@
 <main>
   <article>
     <h2>{$pagedata.title}</h2>
-    <p>test</p>
+    <div class="imgwrap">
+      <img src="/assets/{$pagedata.image_url}" alt="">
+    </div>
+    <p>本文</p>
   </article>
 </main>
