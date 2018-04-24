@@ -1,5 +1,6 @@
 home:
   key: home
+  layer: 1
   title: トップページ
   menu_name: トップページ
   image_url: /img/top.jpg
@@ -8,6 +9,7 @@ home:
 
 howto:
   key: howto
+  layer: 1
   title: 使い方のページ
   menu_name: 使い方のページ
   image_url: img/howto.jpg
@@ -16,6 +18,7 @@ howto:
 
 face:
   key: face
+  layer: 2
   title: 効果ー顔ページ
   menu_name: 効果ー顔ページ
   image_url: img/face.jpg
@@ -24,6 +27,7 @@ face:
 
 product:
   key: product
+  layer: 1
   title: 商品ページ
   menu_name: 商品ページ
   image_url: /img/product/product.jpg
@@ -32,6 +36,7 @@ product:
 
 product_no1:
   key: product_no1
+  layer: 2
   title: 商品１
   menu_name: 商品１
   image_url: /img/product/product01.jpg
@@ -40,6 +45,7 @@ product_no1:
 
 product_no1_effect:
   key: product_no1_effect
+  layer: 3
   title: 商品１の効果
   menu_name: 商品１の効果
   image_url: /img/product/product01_effect.jpg
