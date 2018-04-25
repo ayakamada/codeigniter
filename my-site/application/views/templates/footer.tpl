@@ -1,4 +1,8 @@
-{extends file='./base.tpl'}
 {block name='footer'}
-  <em>&copy; <?php echo date("Y", time()); ?></em>
+  <footer>
+    {block name='footer_inner'}
+      <small>{$constdata.site_name}</small>
+    {/block}
+  </footer>
+  <em>&copy;{$smarty.now|date_format:"%Y"}</em>
 {/block}

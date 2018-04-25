@@ -10,6 +10,14 @@ class IndexControllers extends CI_Controller {
 
   public function index()
   {
+    $this->_getLibraries();//yaml, Util読み込み
+    $page_list = Spyc::YAMLLoad(APPPATH.'config/pages/pages.yaml');
+    $const_data = Spyc::YAMLLoad(APPPATH.'config/const/const.yaml');
+
+    $this->my_smarty->assign('constdata', $const_data);
+    $this->my_smarty->assign('pagelist', $page_list);
+
+    $this->my_smarty->assign('pagedata', $page_list['home']);
     $this->my_smarty->view('index/index.tpl');
   }
 

@@ -1,40 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
-{block name="head"}
-  <head>
-    <meta charset="UTF-8">
-    {block name='title'}
-    <title>
-      {$pagedata.title} | {$constdata.site_name}
-    {/block}
-    </title>
-    {block name='meta'}
-    <meta name="description" content="{block name='description'}{$pagedata.description}{/block}" />
-    <meta name="keywords" content="{block name='keywords'}{$pagedata.keyword}{/block}" />
-    {/block}
-    {block name='robots'}{/block}
-    {block name='canonical'}{/block}
-    {block name='jquery'}{/block}
-    {block name='js'}{/block}
-    {block name='css'}
-      <link rel="stylesheet" href="../../../assets/css/main.css">
-    {/block}
-    {block name='analytics'}{/block}
-  </head>
-{/block}
+{include file="./head.tpl"}
+
 {block name='body'}
 <body>
   {block name='inner-analytics'}{/block}
-  {block name='header'}
-  <header>
-   <img src="/assets/img/logo.jpg" alt="logo">
-  </header>
-  {/block}
+  {include file="./header.tpl"}
   {block name="side"}
   <nav>
     <ul>
     {foreach $pagelist as $pages}
-      {if $pages.layer == 1}
+      {if $pages.layer == 0}
+        <li class="layer1"><a href="/">{$pages.title}</a></li>
+      {elseif $pages.layer == 1}
         <li class="layer1"><a href="/{$pages.key}">{$pages.title}</a></li>
         {assign "parent1" $pages.key}
         {elseif $pages.layer == 2}
@@ -49,13 +27,7 @@
   {/block}
   {block name="main"}
   {/block}
-  {block name='footer'}
-    <footer>
-    {block name='footer_inner'}
-      <small>{$constdata.site_name}</small>
-    {/block}
-    </footer>
-  {/block}
+  {include file="./footer.tpl"}
 </body>
 {/block}
 </html>

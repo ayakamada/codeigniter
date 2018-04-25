@@ -1,6 +1,6 @@
 home:
   key: home
-  layer: 1
+  layer: 0
   title: トップページ
   menu_name: トップページ
   image_url: /img/top.jpg

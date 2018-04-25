@@ -1,4 +1,5 @@
-{extends file='./base.tpl'}
 {block name='header'}
-  <h1>タイトル</h1>
+  <header>
+   <img src="/assets/img/logo.jpg" alt="logo">
+  </header>
 {/block}

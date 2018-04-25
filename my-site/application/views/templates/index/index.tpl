@@ -1,5 +1,5 @@
 {extends file='../base.tpl'}
-{block name='body'}
+{block name='main'}
   {* {include file=""} *}
-  body
+  index
 {/block}
