@@ -5,7 +5,6 @@ class IndexControllers extends CI_Controller {
   public function _getLibraries() {
     require_once APPPATH.'libraries/Spyc.php';
     require_once APPPATH.'libraries/Util.php';
-
   }
 
   public function index()
