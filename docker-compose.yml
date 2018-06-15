@@ -1,0 +1,30 @@
+version: '2'
+services:
+  web:
+    build: ./docker/web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/home/source/sites
+      - ./docker/logs:/var/www/logs
+      - ./docker/php/php.ini:/etc/php.d/php.ini
+      - ./docker/httpd/vhosts:/etc/httpd/conf.d/vhosts
+      - ./docker/httpd/userdir.ext.conf:/etc/httpd/conf.d/userdir.ext.conf
+      - ./docker/certs:/usr/local/ssl/certs
+    networks:
+      front:
+        ipv4_address: 1.0.16.16
+    tty: true
+    stdin_open: true
+    privileged: true
+    command: /sbin/init
+
+networks:
+  front:
+    driver: bridge
+    ipam:
+     driver: default
+     config:
+       - subnet: 1.0.16.0/20
+         gateway: 1.0.16.1
