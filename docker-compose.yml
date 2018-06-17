@@ -14,7 +14,7 @@ services:
       - ./docker/certs:/usr/local/ssl/certs
     networks:
       front:
-        ipv4_address: 1.0.16.16
+        ipv4_address: 172.16.238.6
     tty: true
     stdin_open: true
     privileged: true
@@ -26,5 +26,5 @@ networks:
     ipam:
      driver: default
      config:
-       - subnet: 1.0.16.0/20
-         gateway: 1.0.16.1
+       - subnet: 172.16.238.0/24
+         gateway: 172.16.238.1

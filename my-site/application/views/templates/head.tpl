@@ -15,7 +15,7 @@
     {block name='jquery'}{/block}
     {block name='js'}{/block}
     {block name='css'}
-      <link rel="stylesheet" href="/assets/css/main.css">
+      <link rel="stylesheet" href="/assets/css/style.css">
     {/block}
     {block name='analytics'}{/block}
   </head>
